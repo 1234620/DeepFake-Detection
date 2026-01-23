@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: deepfake-detection
+    runtime: python-3.11
+    plan: free
+    build:
+      - type: command
+        command: "bash build.sh"
+    start: gunicorn app:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11"
+      - key: RENDER
+        value: "true"
+    limits:
+      disk: 1
+      cpuCount: 0.5
+      memoryMB: 512
