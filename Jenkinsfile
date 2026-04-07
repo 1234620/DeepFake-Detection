@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/1234620/DeepFake-Detection.git'
+                git branch: 'main', url: 'https://github.com/1234620/DeepFake-Detection.git'
             }
         }
         stage('Build Docker Image') {
