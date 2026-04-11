@@ -18,7 +18,7 @@ pipeline {
             steps {
                 sh 'docker stop deepfake-app || true'
                 sh 'docker rm deepfake-app || true'
-                sh 'docker run -d -p 5000:5000 --name deepfake-app deepfake-detection:latest'
+                sh 'docker run -d -p 5050:5000 --name deepfake-app deepfake-detection:latest'
             }
         }
     }
