@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        PATH = "/opt/homebrew/bin:/usr/local/bin:/Users/ahmedmoosani/.docker/bin:${env.PATH}"
+    }
     stages {
         stage('Clone') {
             steps {
