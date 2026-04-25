@@ -29,7 +29,7 @@
 <br>
 <hr>
 
-## 📋 Features
+##  Features
 
 ### Core Functionality
 - **Image Analysis**: Single-image deepfake detection with probability scores
@@ -49,7 +49,7 @@
 - Command-line interface for batch processing
 - Detailed confidence scores and frame-level analysis for videos
 
-## 🛠️ Installation and Setup
+##  Installation and Setup
 
 ### Prerequisites
 - Python 3.7 or higher
@@ -74,7 +74,7 @@
    # Ensure deepfake_detector_best.pth is in the project directory
    ```
 
-## 🚀 Running the Application
+##  Running the Application
 
 ### Web Interface
 ```bash
@@ -100,7 +100,7 @@ python evaluate.py --test_data path/to/test_dataset
 python evaluate.py --image path/to/image.jpg
 ```
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 deepfake/
@@ -116,7 +116,7 @@ deepfake/
 └── uploads/                        # Temporary file storage (auto-generated)
 ```
 
-## 🧠 Model Architecture
+##  Model Architecture
 
 ### CNN-LSTM Architecture (Primary Model)
 The current implementation uses a hybrid CNN-LSTM architecture optimized for deepfake detection:
@@ -144,7 +144,7 @@ The current implementation uses a hybrid CNN-LSTM architecture optimized for dee
 
 The system automatically detects and loads the appropriate architecture based on the checkpoint file.
 
-## 🔌 API Response Format
+##  API Response Format
 
 ### Image Detection Response
 ```json
@@ -178,7 +178,7 @@ The system automatically detects and loads the appropriate architecture based on
 }
 ```
 
-## 🔗 API Endpoints
+##  API Endpoints
 
 ### POST /api/detect
 Upload and analyze an image or video file.
@@ -198,7 +198,7 @@ Check server and model status.
 }
 ```
 this is the change 
-## ⚙️ Configuration and Customization
+##  Configuration and Customization
 
 ### Model Configuration
 **Change model checkpoint path** (app.py or detector.py):
@@ -240,7 +240,7 @@ MAX_FILE_SIZE = 200 * 1024 * 1024  # 200MB
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'mp4', 'webm'}
 ```
 
-## ⚡ Performance Optimization
+##  Performance Optimization
 
 ### GPU Acceleration
 The system automatically detects and uses CUDA-compatible GPUs:
@@ -260,7 +260,7 @@ For processing multiple files, use the command-line interface in a loop or modif
 - Temporary files are automatically cleaned up after processing
 - Adjust `num_frames` parameter for videos based on available RAM
 
-## 📊 Model Evaluation
+##  Model Evaluation
 
 To evaluate the model on a test dataset:
 
@@ -287,7 +287,7 @@ test_dataset/
 - Confusion matrix (saved as PNG)
 - Detailed classification report
 
-## 🔧 Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 
@@ -326,7 +326,7 @@ taskkill /PID <process_id> /F
 lsof -ti:5000 | xargs kill -9
 ```
 
-## 💻 Technical Specifications
+##  Technical Specifications
 
 ### Supported File Formats
 - **Images**: JPG, JPEG, PNG, GIF, BMP
@@ -342,7 +342,7 @@ lsof -ti:5000 | xargs kill -9
 - **Video Processing**: Depends on frame count and resolution
 - **Model Size**: ~100-200MB depending on architecture
 
-## 🤝 Development and Contributing
+##  Development and Contributing
 
 ### Code Structure
 - **model.py**: Define new architectures or modify existing ones
@@ -364,10 +364,10 @@ python -c "from detector import DeepfakeDetectorInference; detector = DeepfakeDe
 python detector.py test_image.jpg
 ```
 
-## 📄 License
+##  License
 
 This project is provided as-is for educational and research purposes.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 Built using PyTorch, Flask, and OpenCV for deep learning-based deepfake detection.
